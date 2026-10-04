@@ -1,0 +1,53 @@
+<div class="container px-3 py-3">
+   <p>databinding works!</p>
+
+<div>
+    <div class="col-3">
+        <table>
+            <tr>
+                <td>Student Name</td>
+                 <td>Batch No</td>
+                  <td>COurse Name</td>
+                  <td>Active</td>
+            </tr>
+            <tbody>
+                <td>{{studentName}}</td>
+                <td>{{batchNo}}</td>
+                <td>{{courseName}}</td>
+                <td>{{isStudentActive}}</td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-3">
+        <input type="text" value="{{courseName}}">
+    </div>
+</div>
+
+<br>
+
+<table>
+    <tr>
+        <td>
+            <select name="" id="" value="{{selectedCityName}}">
+                <option value="pune">Pune</option>
+                  <option value="mumbai">Mumbai</option>
+                    <option value="surat">Surat</option>
+                      <option value="satara">Satara</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" [checked]="isStudentActive">
+        </td>
+    </tr>
+</table>
+
+
+
+</div>
+

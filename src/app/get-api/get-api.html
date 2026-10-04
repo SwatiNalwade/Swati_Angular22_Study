@@ -1,0 +1,80 @@
+<div class="container py-4">
+
+  <!-- Buttons -->
+  <div class="row mb-4">
+    <div class="col-12 d-flex gap-3">
+
+      <button class="btn btn-primary" (click)="getUserList()">
+        GET USER
+      </button>
+
+      <button class="btn btn-success" (click)="getTodoList()">
+        Get Todo List
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- User Table -->
+  <div class="row">
+    <div class="col-12">
+
+      <table class="table table-bordered table-striped">
+
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          @for (user of userList; track user.id) {
+            <tr>
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phone }}</td>
+              <td>{{ user.website }}</td>
+            </tr>
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+
+  <!-- todo list table --> 
+
+  <div class="row">
+    <div class="col-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                   <th>Title</th>
+                   <th>Completed</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+               @for(todo of todoList();track todo.id){
+                 <tr>
+                    <td>{{todo.id}}</td>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.completed}}</td>
+                 </tr>
+               }
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+</div>
